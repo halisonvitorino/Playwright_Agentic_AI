@@ -1,0 +1,34 @@
+[
+  {
+    "passed": true,
+    "message": "No validation errors after submission (demo site behavior)"
+  },
+  {
+    "passed": false,
+    "message": "Missing or incorrect error messages for required fields"
+  },
+  {
+    "passed": true,
+    "message": "Email error displayed"
+  },
+  {
+    "passed": true,
+    "message": "Field treated as empty"
+  },
+  {
+    "passed": true,
+    "message": "Form not submitted"
+  },
+  {
+    "passed": true,
+    "message": "Input may have been truncated"
+  },
+  {
+    "passed": true,
+    "message": "Form not submitted"
+  },
+  {
+    "passed": true,
+    "message": "No validation errors after submission (demo site behavior)"
+  }
+]
