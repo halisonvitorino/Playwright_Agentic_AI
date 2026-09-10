@@ -1,17 +1,20 @@
-const { test, expect } = require('@playwright/test');
-const { RegistrationPage } = require('../../pages/feat-001-page');
-const { testData } = require('../../utils/test-data');
+const { test, expect } = require("@playwright/test");
+const { HomePage } = require("../../pages/home-page");
+const { RegistrationPage } = require("../../pages/registration-page");
+const { testData } = require("../../utils/test-data");
 
-test.describe('Registration Flow - Happy Path', () => {
+test.describe("Registration Flow - Happy Path", () => {
+  let homePage;
   let registrationPage;
 
   test.beforeEach(async ({ page }) => {
+    homePage = new HomePage(page);
     registrationPage = new RegistrationPage(page);
-    await registrationPage.navigateToHomePage();
-    await registrationPage.clickRegistrar();
+    await homePage.navigateToHomePage();
+    await homePage.clickRegistrar();
   });
 
-  test('should successfully register with valid data', async ({ page }) => {
+  test("should successfully register with valid data", async ({ page }) => {
     // Fill the registration form with valid data
     await registrationPage.fillRegistrationForm(testData.validUser);
 
@@ -29,6 +32,11 @@ test.describe('Registration Flow - Happy Path', () => {
 
     // For demo site, we accept either being on home page or having some success indication
     // or simply having no validation errors after submission
-    expect(isOnHomePage || hasSuccessMessage || hasAlertSuccess || !hasValidationErrors).toBe(true);
+    expect(
+      isOnHomePage ||
+        hasSuccessMessage ||
+        hasAlertSuccess ||
+        !hasValidationErrors,
+    ).toBe(true);
   });
 });

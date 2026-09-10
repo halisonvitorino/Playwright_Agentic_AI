@@ -1,8 +1,8 @@
-const { test, expect } = require('@playwright/test');
-const { RegistrationPage } = require('../../pages/feat-001-page');
-const { testData } = require('../../utils/test-data');
+const { test, expect } = require("@playwright/test");
+const { RegistrationPage } = require("../../pages/registration-page");
+const { testData } = require("../../utils/test-data");
 
-test.describe('Registration Flow - Password Mismatch Validation', () => {
+test.describe("Registration Flow - Password Mismatch Validation", () => {
   let registrationPage;
 
   test.beforeEach(async ({ page }) => {
@@ -11,12 +11,16 @@ test.describe('Registration Flow - Password Mismatch Validation', () => {
     await registrationPage.clickRegistrar();
   });
 
-  test('should not allow submission when passwords do not match', async ({ page }) => {
+  test("should not allow submission when passwords do not match", async ({
+    page,
+  }) => {
     // Fill form with mismatched passwords
     await registrationPage.fillNome(testData.validUser.nome);
     await registrationPage.fillEmail(testData.validUser.email);
     await registrationPage.fillSenha(testData.passwordMismatch[0].senha); // Senha123!
-    await registrationPage.fillConfirmacaoSenha(testData.passwordMismatch[0].confirmacao); // Senha456!
+    await registrationPage.fillConfirmacaoSenha(
+      testData.passwordMismatch[0].confirmacao,
+    ); // Senha456!
 
     // Submit the form
     await registrationPage.submitForm();

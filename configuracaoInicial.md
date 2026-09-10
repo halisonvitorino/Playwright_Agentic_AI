@@ -2,8 +2,8 @@
 
 ## Pr�-requisitos
 
-- **Node.js** (vers�o = 18) instalado.  
-  Voc� j� tem o Node.js v24.18.0, portanto esse requisito est� satisfeito.
+- **Node.js** (versão = 18) instalado.  
+  Voce ja tem o Node.js v24.18.0, portanto esse requisito esta satisfeito.
 
 ## 1. Instalar o runner de testes do Playwright
 
@@ -13,8 +13,8 @@ Execute no diretório do seu projeto:
 npm install -D @playwright/test
 ```
 
-**Se encontrar erros de permiss�o (EPERM) ao escrever no `.npmrc` ou no cache:**  
-Defina vari�veis de ambiente para usar um cache e um arquivo de configura��o locais dentro do projeto antes de rodar o comando:
+**Se encontrar erros de permissao (EPERM) ao escrever no `.npmrc` ou no cache:**  
+Defina variaveis de ambiente para usar um cache e um arquivo de configura��o locais dentro do projeto antes de rodar o comando:
 
 ```cmd
 set NPM_CACHE=%cd%\npm_cache
@@ -32,9 +32,9 @@ Depois de instalar o pacote, baixe os navegadores que o Playwright vai usar:
 npx playwright install
 ```
 
-Isso baixar� Chromium, Firefox e WebKit (pode levar alguns minutos, dependendo da conex�o).
+Isso baixar Chromium, Firefox e WebKit (pode levar alguns minutos, dependendo da conex�o).
 
-## 3. (Opcional) Criar arquivo de configura��o
+## 3. (Opcional) Criar arquivo de configuracao
 
 O Playwright funciona sem configura��o, mas voc� pode querer ajustar op��es. Crie um arquivo `playwright.config.ts` ou `playwright.config.js` na raiz do projeto. Exemplo simples:
 
@@ -173,3 +173,11 @@ https://github.com/tayyabakmal1/qa-prompt-library/tree/main
 ## First run prompt
 
 Perform end to end QA workflow and MCP i have defined in current prompt file E2EPromptFile.md . Perform the QA work flow step by step defined in this prompt file.
+
+## Test run prompt
+
+Perform end to end QA tests i have defined in current prompt file prompt-execucao-testes.md . Perform the QA work flow step by step defined in this prompt file.
+
+## Faker
+
+npm install @faker-js/faker --save-dev

@@ -219,36 +219,37 @@ Include:
 - Complete test coverage analysis
 - Evidence and screenshots attached
 
-//## 🚀 STEP 7: Commit to Git Repository
+## 🚀 STEP 7: Commit to Git Repository
 
-//**Git Repository URL:** `https://github.com/halisonvitorino/FullAutomationAIFramework`
+**Git Repository URL:** `https:github.com/halisonvitorino/FullAutomationAIFramework`
 
-//### Prompt:
+### Prompt:
 
-//Now commit all the test artifacts to the Git repository using the GitHub MCP server.
+Now commit all the test artifacts to the Git repository using the GitHub MCP server.
 
-//Git Repository URL: https://github.com/halisonvitorino/FullAutomationAIFramework
+Git Repository URL: https:github.com/halisonvitorino/FullAutomationAIFramework
 
-//Please perform the following Git operations:
+Please perform the following Git operations:
 
-//1. Initialize Git repository if not already initialized
-//2. Stage all files in the workspace (all new and modified files) if not already staged
-//3. Create a commit with the message:
-//"feat(tests): Add complete test suite for Jira_Task-001 checkout workflow
-//- Add user story documentation
-//- Add comprehensive test plan with all scenarios
-//- Add test execution report with results
-//- Add automated test scripts for checkout process
-//- Include validation, navigation, and edge case tests
+1. Initialize Git repository if not already initialized
+2. Stage all files in the workspace (all new and modified files) if not already staged
+3. Create a commit with the message:
+   "feat(tests): Add complete test suite for Jira_Task-001 checkout workflow
 
-//Resolves Jira_Task-001"
+- Add user story documentation
+- Add comprehensive test plan with all scenarios
+- Add test execution report with results
+- Add automated test scripts for checkout process
+- Include validation, navigation, and edge case tests
 
-//4. Push all changes to the Git repository
-//5. Provide a summary of what was committed
+Resolves Jira_Task-001"
 
-//### Expected Output:
+4. Push all changes to the Git repository
+5. Provide a summary of what was committed
 
-//- All workspace files committed to Git
-//- Descriptive commit message following conventional commit format
-//- Confirmation of successful push to the provided repository
-//- Summary of changes
+### Expected Output:
+
+- All workspace files committed to Git
+- Descriptive commit message following conventional commit format
+- Confirmation of successful push to the provided repository
+- Summary of changes

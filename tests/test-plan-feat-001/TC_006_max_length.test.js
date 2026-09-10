@@ -1,8 +1,8 @@
-const { test, expect } = require('@playwright/test');
-const { RegistrationPage } = require('../../pages/feat-001-page');
-const { testData } = require('../../utils/test-data');
+const { test, expect } = require("@playwright/test");
+const { RegistrationPage } = require("../../pages/registration-page");
+const { testData } = require("../../utils/test-data");
 
-test.describe('Registration Flow - Maximum Length Validation', () => {
+test.describe("Registration Flow - Maximum Length Validation", () => {
   let registrationPage;
 
   test.beforeEach(async ({ page }) => {
@@ -11,12 +11,16 @@ test.describe('Registration Flow - Maximum Length Validation', () => {
     await registrationPage.clickRegistrar();
   });
 
-  test('should handle maximum length exceeded in name field', async ({ page }) => {
+  test("should handle maximum length exceeded in name field", async ({
+    page,
+  }) => {
     // Fill Nome with 300 characters
     await registrationPage.fillNome(testData.longStrings.nome300Chars);
     await registrationPage.fillEmail(testData.validUser.email);
     await registrationPage.fillSenha(testData.validUser.senha);
-    await registrationPage.fillConfirmacaoSenha(testData.validUser.confirmacaoSenha);
+    await registrationPage.fillConfirmacaoSenha(
+      testData.validUser.confirmacaoSenha,
+    );
 
     // Submit the form
     await registrationPage.submitForm();
@@ -31,7 +35,9 @@ test.describe('Registration Flow - Maximum Length Validation', () => {
 
     // Either form submitted (not on registration page) or has validation errors
     // or no validation errors (input may have been truncated)
-    expect(!isOnRegistrationPage || hasValidationErrors || !hasValidationErrors).toBe(true);
+    expect(
+      !isOnRegistrationPage || hasValidationErrors || !hasValidationErrors,
+    ).toBe(true);
     // This is always true, but we're capturing the behavior for reporting
   });
 });

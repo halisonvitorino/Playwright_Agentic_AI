@@ -1,8 +1,8 @@
-const { test, expect } = require('@playwright/test');
-const { RegistrationPage } = require('../../pages/feat-001-page');
-const { testData } = require('../../utils/test-data');
+const { test, expect } = require("@playwright/test");
+const { RegistrationPage } = require("../../pages/registration-page");
+const { testData } = require("../../utils/test-data");
 
-test.describe('Registration Flow - Required Fields Validation', () => {
+test.describe("Registration Flow - Required Fields Validation", () => {
   let registrationPage;
 
   test.beforeEach(async ({ page }) => {
@@ -11,7 +11,9 @@ test.describe('Registration Flow - Required Fields Validation', () => {
     await registrationPage.clickRegistrar();
   });
 
-  test('should show required field errors when all fields are empty', async ({ page }) => {
+  test("should show required field errors when all fields are empty", async ({
+    page,
+  }) => {
     // Submit form with all fields empty
     await registrationPage.submitForm();
 
@@ -23,9 +25,9 @@ test.describe('Registration Flow - Required Fields Validation', () => {
 
     // Email, senha, and confirmacao should show required field error
     // Note: Nome field has inconsistent behavior in the demo app
-    expect(emailError).toBe('É campo obrigatório');
-    expect(senhaError).toBe('É campo obrigatório');
-    expect(confirmacaoErro).toBe('É campo obrigatório');
+    expect(emailError).toBe("É campo obrigatório");
+    expect(senhaError).toBe("É campo obrigatório");
+    expect(confirmacaoErro).toBe("É campo obrigatório");
 
     // Verify form was not submitted (still on registration page)
     const isOnRegistrationPage = await registrationPage.isOnRegistrationPage();
