@@ -1,4 +1,4 @@
-# Configura��o Inicial para Playwright
+# Configuração Inicial para Playwright
 
 ## Pr�-requisitos
 
