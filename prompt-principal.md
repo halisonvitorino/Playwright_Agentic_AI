@@ -8,10 +8,10 @@ This prompt guides you through a complete 7-step QA workflow using MCP servers a
 
 ### Prompt:
 
-Context: You are an expert in test automation using Playwright with javascript.
+Context: You are an expert in test automation using Playwright, javascript and Ai Assistance.
 
 I need you to start a testing workflow.
-So first, read the user story from the file: user-stories/feat-001.md
+So first, read the user story from the file: user-stories/feat-002.md
 Summarize the key requirements, acceptance criteria and testing scope.
 
 ### Expected Output:
@@ -25,7 +25,7 @@ Summarize the key requirements, acceptance criteria and testing scope.
 
 ### Prompt:
 
-Based on the user story [feat-001.md] that we just reviewed, use the playwright-test-planner agent to:
+Based on the user story [feat-002.md] that we just reviewed, use the playwright-test-planner agent to:
 
 1. Read the application URL and test credentials from the user story
 2. Explore the application and understand all workflows mentioned in the acceptance criteria
@@ -35,7 +35,7 @@ Based on the user story [feat-001.md] that we just reviewed, use the playwright-
    - Edge cases and boundary conditions
    - Navigation flow tests
    - UI element validation
-4. Save the test plan as: test-plans/[test-plan-feat-001.md]
+4. Save the test plan as: test-plans/[test-plan-feat-002.md]
 
 Ensure each test scenario includes:
 
@@ -55,7 +55,7 @@ Ensure each test scenario includes:
 ### Prompt:
 
 Now I need to perform manual exploratory testing using Playwright MCP browser tools.
-Read the test plan from: test-plans/[test-plan-feat-001.md]
+Read the test plan from: test-plans/[test-plan-feat-002.md]
 
 Then execute the test scenarios defined in that test plan:
 
@@ -68,6 +68,7 @@ Then execute the test scenarios defined in that test plan:
    - Any UI inconsistencies or unexpected behaviors
    - Missing validations or bugs discovered
    - Screenshots and videos as evidence
+   - Identify and memorize all elements of the page for future usage
 
 ### Expected Output:
 
@@ -75,6 +76,7 @@ Then execute the test scenarios defined in that test plan:
 - Screenshots of the application at various states
 - List of observations and findings
 - Any issues discovered during exploration
+- Page elements memorized for future interactions
 
 ## ⚙️ STEP 4: Generate Automation Scripts
 
@@ -84,13 +86,13 @@ Now create automated test scripts using the playwright-test-generator agent.
 
 Review:
 
-1. Test plan from: test-plans/[test-plan-feat-001.md] (for test scenarios and steps)
+1. Test plan from: test-plans/[test-plan-feat-002.md] (for test scenarios and steps)
 2. Exploratory testing results from Step 3 (for actual element selectors and UI insights)
 
 Using insights from the manual exploratory testing:
 
 - Leverage the element selectors and locators that were successfully used in Step 3
-- Use stable element properties (IDs, data attributes, roles) discovered during exploration
+- Use stable element properties (IDs, data attributes, roles), following the best practices discovered during exploration
 - Apply wait strategies and UI behaviors observed during manual testing
 - Incorporate any workarounds for UI quirks discovered
 
@@ -101,9 +103,9 @@ Generate Playwright JavaScript automation scripts:
 3. Organize the assertions for use on scripts into appropriate files named assertions.js in: utils/
 4. Organize the configs for use on scripts (if needed) into appropriate files named config.js in: utils/
 5. Organize the dinamic test data for use on scripts into appropriate files named test-data.js in: utils/
-6. Organize the page data/behavior for use on scripts into appropriate files named feat-001-page.js in: pages/
-7. Create scripts for each test scenario from the test plan
-8. Organize scripts into appropriate test suite files in: tests/test-plan-feat-001/
+6. Organize the page data/behavior for use on scripts into appropriate files named feat-002-page.js in: pages/
+7. Create scripts for each test scenario from the test plan using the actions,assertions, configs and test data organized on: utils/
+8. Organize scripts into appropriate test suite files in: tests/test-plan-feat-002/
 9. Use the test case names and steps from the test plan
 10. Use reliable selectors and strategies from exploratory testing
 
@@ -117,6 +119,7 @@ Requirements for all scripts:
 - Use robust element selectors discovered during manual testing
 - Add comments for complex steps
 - Use proper wait strategies based on actual application behavior
+- Use the actions,assertions, configs and test data organized on: utils/ for the test scripts
 - Add proper test hooks (beforeEach, afterEach)
 - Configure for browsers (Chrome)
 
@@ -124,7 +127,7 @@ After generating the scripts, run all the tests to verify they pass.
 
 ### Expected Output:
 
-- Test suite files created in tests/feat-001/ based on test plan scenarios
+- Test suite files created in tests/feat-002/ based on test plan scenarios
 - Scripts using robust selectors discovered during exploratory testing
 - All scripts follow Playwright best practices
 - Initial test generation complete
@@ -135,7 +138,7 @@ After generating the scripts, run all the tests to verify they pass.
 
 Now execute all the generated automation scripts and heal any failures using the playwright-test-healer agent.
 
-1. Run all automation scripts in: tests/feat-001/
+1. Run all automation scripts in: tests/feat-002/
 2. Identify any failing tests
 3. For each failing test, use the playwright-test-healer agent to:
    - Analyze the failure (selector issues, timing issues, assertion failures)
@@ -153,7 +156,7 @@ Now execute all the generated automation scripts and heal any failures using the
 
 - All automation tests executed
 - Failing tests identified and healed using test-healer agent
-- Healed test scripts updated in tests/feat-001/
+- Healed test scripts updated in tests/feat-002/
 - Final stable test execution results
 - Summary of healing activities performed
 
@@ -169,7 +172,7 @@ Please compile results from:
 - Step 4: Generated automation scripts
 - Step 5: Automated test execution and healing results
 
-Structure the report as: test-results/feat-001-test-report.md
+Structure the report as: test-results/feat-002-test-report.md
 
 Include:
 
@@ -221,20 +224,20 @@ Include:
 
 ## 🚀 STEP 7: Commit to Git Repository
 
-**Git Repository URL:** `https:github.com/halisonvitorino/FullAutomationAIFramework`
+**Git Repository URL:** `https://github.com/halisonvitorino/Playwright_Agentic_AI`
 
 ### Prompt:
 
 Now commit all the test artifacts to the Git repository using the GitHub MCP server.
 
-Git Repository URL: https:github.com/halisonvitorino/FullAutomationAIFramework
+Git Repository URL: https://github.com/halisonvitorino/Playwright_Agentic_AI
 
 Please perform the following Git operations:
 
-1. Initialize Git repository if not already initialized
+1. Initialize Git repository only if not already initialized
 2. Stage all files in the workspace (all new and modified files) if not already staged
 3. Create a commit with the message:
-   "feat(tests): Add complete test suite for Jira_Task-001 checkout workflow
+   "feat(tests): Add complete test suite for Jira_Task-002
 
 - Add user story documentation
 - Add comprehensive test plan with all scenarios
@@ -242,7 +245,7 @@ Please perform the following Git operations:
 - Add automated test scripts for checkout process
 - Include validation, navigation, and edge case tests
 
-Resolves Jira_Task-001"
+Resolves Jira_Task-002"
 
 4. Push all changes to the Git repository
 5. Provide a summary of what was committed

@@ -2,7 +2,7 @@
 
 ### Prompt:
 
-Now execute all the generated automation scripts and heal any failures using the playwright-test-healer agent.
+Execute all the generated automation scripts and heal any failures using the playwright-test-healer agent.
 
 1. Run all automation scripts in: tests/feat-001-tests/
 2. Identify any failing tests

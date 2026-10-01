@@ -1,6 +1,6 @@
-# Configura��o Inicial para Playwright
+# Configuração Inicial para Playwright
 
-## Pr�-requisitos
+## Pré-requisitos
 
 - **Node.js** (versão = 18) instalado.  
   Voce ja tem o Node.js v24.18.0, portanto esse requisito esta satisfeito.
@@ -14,7 +14,7 @@ npm install -D @playwright/test
 ```
 
 **Se encontrar erros de permissao (EPERM) ao escrever no `.npmrc` ou no cache:**  
-Defina variaveis de ambiente para usar um cache e um arquivo de configura��o locais dentro do projeto antes de rodar o comando:
+Defina variaveis de ambiente para usar um cache e um arquivo de configuração locais dentro do projeto antes de rodar o comando:
 
 ```cmd
 set NPM_CACHE=%cd%\npm_cache
@@ -24,7 +24,7 @@ npm install -D @playwright/test
 
 _(No PowerShell, use `$env:NPM_CACHE = "$(pwd)\npm_cache"` e `$env:NPM_CONFIG_USERCONFIG = "$(pwd)\npmrc"` antes do `npm install`.)_
 
-## 2. Instalar os navegadores necess�rios
+## 2. Instalar os navegadores necessários
 
 Depois de instalar o pacote, baixe os navegadores que o Playwright vai usar:
 
@@ -32,11 +32,11 @@ Depois de instalar o pacote, baixe os navegadores que o Playwright vai usar:
 npx playwright install
 ```
 
-Isso baixar Chromium, Firefox e WebKit (pode levar alguns minutos, dependendo da conex�o).
+Isso baixar Chromium, Firefox e WebKit (pode levar alguns minutos, dependendo da conexão).
 
 ## 3. (Opcional) Criar arquivo de configuracao
 
-O Playwright funciona sem configura��o, mas voc� pode querer ajustar op��es. Crie um arquivo `playwright.config.ts` ou `playwright.config.js` na raiz do projeto. Exemplo simples:
+O Playwright funciona sem configuração, mas você pode querer ajustar opções. Crie um arquivo `playwright.config.ts` ou `playwright.config.js` na raiz do projeto. Exemplo simples:
 
 ```js
 // playwright.config.js
@@ -57,12 +57,12 @@ module.exports = {
 
 ## 4. Criar seu primeiro teste
 
-Dentro da pasta `tests` (ou outra que voc� configure), crie um arquivo de teste, por exemplo `tests/example.test.js`:
+Dentro da pasta `tests` (ou outra que você configure), crie um arquivo de teste, por exemplo `tests/example.test.js`:
 
 ```js
 const { test, expect } = require("@playwright/test");
 
-test("t�tulo da p�gina", async ({ page }) => {
+test("título da página", async ({ page }) => {
   await page.goto("https://playwright.dev/");
   await expect(page).toHaveTitle(/Playwright/);
 });
@@ -82,7 +82,7 @@ Para executar em modo headed (visualizando o navegador):
 npx playwright test --headed
 ```
 
-Para ver o relat�rio HTML ap�s a execu��o:
+Para ver o relatório HTML após a execução:
 
 ```bash
 npx playwright show-report
@@ -90,16 +90,16 @@ npx playwright show-report
 
 ## 6. Gerar testes com o gravador (opcional)
 
-Voc� pode usar o gerador de testes para gravar intera��es e criar testes automaticamente:
+Você pode usar o gerador de testes para gravar interações e criar testes automaticamente:
 
 ```bash
 npx playwright codegen https://playwright.dev/
 ```
 
-## Resumo r�pido dos comandos
+## Resumo rápido dos comandos
 
 ```bash
-# 1. Instalar depend�ncia (ajuste de permiss�o se necess�rio)
+# 1. Instalar dependência (ajuste de permissão se necessário)
 set NPM_CACHE=%cd%\npm_cache
 set NPM_CONFIG_USERCONFIG=%cd%\npmrc
 npm install -D @playwright/test
@@ -113,7 +113,7 @@ npx playwright install
 npx playwright test
 ```
 
-Com esses passos, seu ambiente estar� pronto para desenvolver e executar testes end-to-end usando Playwright. Boa sorte nos testes! ??
+Com esses passos, seu ambiente estará pronto para desenvolver e executar testes end-to-end usando Playwright. Boa sorte nos testes! ??
 
 ---
 
