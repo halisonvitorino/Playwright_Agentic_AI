@@ -11,7 +11,7 @@ This prompt guides you through a complete 7-step QA workflow using MCP servers a
 Context: You are an expert in test automation using Playwright, javascript and Ai Assistance.
 
 I need you to start a testing workflow.
-So first, read the user story from the file: user-stories/feat-002.md
+So first, read the user story from the file: user-stories/feat-001.md
 Summarize the key requirements, acceptance criteria and testing scope.
 
 ### Expected Output:
@@ -25,7 +25,7 @@ Summarize the key requirements, acceptance criteria and testing scope.
 
 ### Prompt:
 
-Based on the user story [feat-002.md] that we just reviewed, use the playwright-test-planner agent to:
+Based on the user story [feat-001.md] that you just reviewed, use the playwright-test-planner agent to:
 
 1. Read the application URL and test credentials from the user story
 2. Explore the application and understand all workflows mentioned in the acceptance criteria
@@ -35,7 +35,7 @@ Based on the user story [feat-002.md] that we just reviewed, use the playwright-
    - Edge cases and boundary conditions
    - Navigation flow tests
    - UI element validation
-4. Save the test plan as: test-plans/[test-plan-feat-002.md]
+4. Save the test plan as: test-plans/[test-plan-feat-001.md]
 
 Ensure each test scenario includes:
 
@@ -54,8 +54,8 @@ Ensure each test scenario includes:
 
 ### Prompt:
 
-Now I need to perform manual exploratory testing using Playwright MCP browser tools.
-Read the test plan from: test-plans/[test-plan-feat-002.md]
+Now I need you to perform manual exploratory testing using Playwright MCP browser tools.
+Read the test plan from: test-plans/[test-plan-feat-001.md]
 
 Then execute the test scenarios defined in that test plan:
 
@@ -77,6 +77,7 @@ Then execute the test scenarios defined in that test plan:
 - List of observations and findings
 - Any issues discovered during exploration
 - Page elements memorized for future interactions
+-
 
 ## ⚙️ STEP 4: Generate Automation Scripts
 
@@ -86,7 +87,7 @@ Now create automated test scripts using the playwright-test-generator agent.
 
 Review:
 
-1. Test plan from: test-plans/[test-plan-feat-002.md] (for test scenarios and steps)
+1. Test plan from: test-plans/[test-plan-feat-001.md] (for test scenarios and steps)
 2. Exploratory testing results from Step 3 (for actual element selectors and UI insights)
 
 Using insights from the manual exploratory testing:
@@ -108,6 +109,8 @@ Generate Playwright JavaScript automation scripts:
 8. Organize scripts into appropriate test suite files in: tests/test-plan-feat-002/
 9. Use the test case names and steps from the test plan
 10. Use reliable selectors and strategies from exploratory testing
+11. Create a BasePage and put there all common methods
+12. Each test must be independent with it own 'beforeEach'
 
 Requirements for all scripts:
 
@@ -121,7 +124,6 @@ Requirements for all scripts:
 - Use proper wait strategies based on actual application behavior
 - Use the actions,assertions, configs and test data organized on: utils/ for the test scripts
 - Add proper test hooks (beforeEach, afterEach)
-- Configure for browsers (Chrome)
 
 After generating the scripts, run all the tests to verify they pass.
 
