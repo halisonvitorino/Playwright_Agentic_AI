@@ -4,13 +4,13 @@
 
 Create a comprehensive test execution report based on manual testing, automation execution, and healing activities.
 
-Please compile results from:
+Compile results from:
 
 - Step 3: Manual exploratory testing results
 - Step 4: Generated automation scripts
 - Step 5: Automated test execution and healing results
 
-Structure the report as: test-results/feat-002-test-report.md
+Structure the report as: test-results/
 
 Include:
 

@@ -2,10 +2,7 @@
 
 ## Prompt:
 
-Now I need you to perform manual exploratory testing using Playwright MCP browser tools.
-Read the test plan from: test-plans/[test-plan-feat-001.md]
-
-Then execute the test scenarios defined in that test plan:
+Read the test plan from: test-plans/test-plan-feat-001.md and perform manual exploratory testing defined in that test plan using Playwright MCP browser tools.
 
 1. Use Playwright browser tools to manually execute each test scenario from the test plan
 2. Follow the step-by-step instructions in each test case

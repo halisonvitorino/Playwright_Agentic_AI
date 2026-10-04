@@ -4,7 +4,7 @@
 
 ## Prompt:
 
-Now commit all the test artifacts to the Git repository using the GitHub MCP server.
+Commit all the test artifacts to the Git repository using the GitHub MCP server located on .vscode/
 
 Git Repository URL: https://github.com/halisonvitorino/Playwright_Agentic_AI
 
@@ -12,8 +12,7 @@ Please perform the following Git operations:
 
 1. Initialize Git repository only if not already initialized
 2. Stage all files in the workspace (all new and modified files) if not already staged
-3. Create a commit with the message:
-   "feat(tests): Add complete test suite for Jira_Task-002
+3. Create a commit with the message: "feat(tests): Add complete test suite for Jira_Task-001"
 
 - Add user story documentation
 - Add comprehensive test plan with all scenarios
@@ -21,7 +20,7 @@ Please perform the following Git operations:
 - Add automated test scripts for checkout process
 - Include validation, navigation, and edge case tests
 
-Resolves Jira_Task-002"
+Resolves Jira_Task-001
 
 4. Push all changes to the Git repository
 5. Provide a summary of what was committed
