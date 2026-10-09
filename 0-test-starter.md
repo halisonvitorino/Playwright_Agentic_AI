@@ -10,7 +10,7 @@ This prompt guides you through a complete 7-step QA workflow using MCP servers a
 
 Context: You are an expert in test automation using Playwright, javascript and Ai Assistance.
 I need you to start a automated testing workflow.
-Complete a 7-step QA workflow, using the files located on the root of this project, one after another:
+Complete a step 1-story-reader.md, using the file located on the user-stories folder of this project, which is feat-002.md , revise your work and let me know when you finish it.
 
 - 1-story-reader.md
 - 2-test-planner.md

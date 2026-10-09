@@ -33,7 +33,7 @@ Eu quero poder me autenticar
 Para acessar o sistema
 
 Background:
-Dado que o usuário ja registrado
+Dado que o usuário ja registrado (Antes dos testes é necessário criar um usuário)
 
 # CENÁRIO 1 - LOGIN COM SUCESSO
 
@@ -43,20 +43,48 @@ Quando preenche todos os campos obrigatórios com dados válidos
 E tenta submeter o formulario
 Então é redirecionado para dashboard page
 
-# CENÁRIO 2 - CAMPOS OBRIGATÓRIOS VAZIOS
+# CENÁRIO 2 - TENTAR LOGIN COM CAMPOS OBRIGATÓRIOS VAZIOS
 
-Cenário: Login com campos obrigatórios em branco
-Dado que o usuário está na página inicial
-Quando deixa campos obrigatórios em branco
-E tenta submeter o formulario
+Cenário: Tentar login com campos obrigatórios em branco
+Dado que o usuário está na página inicial (Sem criar um usuário)
+Quando tenta submeter o formulario sem preencher os campos obrigatórios
 Então o sistema não deve permitir a submissão
 E deve exibir mensagens de erro ao lado de cada campo vazio
 
-# CENÁRIO 3 - E-MAIL INVÁLIDO
+# CENÁRIO 3 - TENTAR LOGIN COM E-MAIL INVÁLIDO
 
-Cenário: Login com e-mail no formato incorreto
-Dado que o usuário está na página inicial
+Cenário: Tentar login com e-mail no formato incorreto
+Dado que o usuário está na página inicial (Sem criar um usuário)
 Quando preenche o campo E-mail sem @
+E tenta submeter o formulario
+Então o sistema deve exibir a mensagem de erro
+E o sistema não deve permitir a submissão
+
+# CENÁRIO 4 - TENTAR LOGIN COM SENHA INVÁLIDA
+
+Cenário: Tentar login com senha inválida
+Dado que o usuário está na página inicial (Sem criar um usuário)
+Quando preenche o campo Senha com dados inválidos
+E tenta submeter o formulario
+Então o sistema deve exibir a mensagem de erro
+E o sistema não deve permitir a submissão
+
+# CENÁRIO 5 - TENTAR LOGIN COM E-MAIL INVÁLIDO E SENHA INVÁLIDA
+
+Cenário: Tentar login com e-mail inválido e senha inválida
+Dado que o usuário está na página inicial (Sem criar um usuário)
+Quando preenche o campo E-mail com dados inválidos
+E preenche o campo Senha com dados inválidos
+E tenta submeter o formulario
+Então o sistema deve exibir a mensagem de erro
+E o sistema não deve permitir a submissão
+
+# CENÁRIO 6 - TENTAR LOGIN COM E-MAIL INVÁLIDO E SENHA INVÁLIDA
+
+Cenário: Tentar login com e-mail inválido e senha inválida
+Dado que o usuário está na página inicial (Sem criar um usuário)
+Quando preenche o campo E-mail com dados inválidos
+E preenche o campo Senha com dados inválidos
 E tenta submeter o formulario
 Então o sistema deve exibir a mensagem de erro
 E o sistema não deve permitir a submissão

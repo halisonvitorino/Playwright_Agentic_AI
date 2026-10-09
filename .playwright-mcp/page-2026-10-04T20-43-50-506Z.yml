@@ -1,0 +1,55 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "O banco com bugs e falhas do seu jeito" [level=1] [ref=e9]
+      - paragraph [ref=e10]: Faça transferências e pagamentos com bugs e pratique testes com sucesso em um cenário quase real!
+    - generic [ref=e12]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - text: E-mail
+          - textbox "Informe seu e-mail" [ref=e16]
+          - paragraph
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - text: Senha
+            - textbox "Informe sua senha" [ref=e19]
+            - paragraph
+          - button [ref=e20] [cursor=pointer]:
+            - img "Icon Close Eye" [ref=e24]
+        - generic [ref=e25]:
+          - button "Acessar" [ref=e26] [cursor=pointer]
+          - button "Registrar" [ref=e27] [cursor=pointer]
+        - generic [ref=e28]:
+          - link "Conheça nossos requisitos" [ref=e29] [cursor=pointer]:
+            - /url: /requirements
+          - paragraph [ref=e30]: A aplicação não conta com um banco de dados, todas as informações são armazenadas em memória local
+      - generic [ref=e32]:
+        - link "Voltar ao login" [ref=e36] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=e37]:
+          - text: E-mail
+          - textbox "Informe seu e-mail" [ref=e38]
+          - paragraph
+        - generic [ref=e39]:
+          - text: Nome
+          - textbox "Informe seu Nome" [ref=e40]
+          - paragraph
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - text: Senha
+            - textbox "Informe sua senha" [ref=e43]
+            - paragraph
+          - button [ref=e44] [cursor=pointer]:
+            - img "Icon Close Eye" [ref=e48]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - text: Confirmação senha
+            - textbox "Informe a confirmação da senha" [ref=e51]
+            - paragraph
+          - button [ref=e52] [cursor=pointer]:
+            - img "Icon Close Eye" [ref=e56]
+        - generic [ref=e57]:
+          - paragraph [ref=e58]: Criar conta com saldo ?
+          - generic [ref=e59] [cursor=pointer]
+        - button "Cadastrar" [ref=e62] [cursor=pointer]
+  - alert [ref=e63]

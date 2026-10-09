@@ -1,0 +1,9 @@
+Como atacar os erros de IA
+
+- Checar o proprio trabalho antes de seguir para o proximo passo (fazer o 1-story-reader.md antes de seguir para o 2-test-planner.md)
+- Fazer testes manuasi de cada etapa para verificar se o trabalho esta correto
+- Usar menos ambiguidades e mais clareza nos comandos
+- Menos ruido = contexto limpo = menos erros de interpretação -> usar menos texto e mais informacoes relevantes
+
+
+.claude\skills\test-planning\SKILL.md - arquivo que contem a definicao da skill test-planning   

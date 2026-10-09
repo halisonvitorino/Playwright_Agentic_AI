@@ -2,7 +2,7 @@
 
 ## Prompt:
 
-Read the user story from the file located at: user-stories/feat-001.md and memorize for the next steps
+Read the user story from the file located at: user-stories/feat-002.md and memorize for the next steps
 
 ### Expected Output:
 
